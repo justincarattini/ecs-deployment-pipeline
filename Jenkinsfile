@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
   steps {
-    git branch: 'main', credentialsId: 'justin-github-token-2', url: 'https://github.com/justincarattini/ecs-deployment-pipeline.git'
+    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-ecr-creds']]) {
   }
 }
 
