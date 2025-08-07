@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
   steps {
-    git credentialsId: 'justin-github-token', url: 'https://github.com/justincarattini/clean-ecs-deployment.git'
+    git credentialsId: 'justin-github-token', url: 'https://github.com/justincarattini/ecs-deployment-pipeline.git'
   }
 }
 
