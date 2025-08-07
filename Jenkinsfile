@@ -10,11 +10,10 @@ pipeline {
 
     stages {
         stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 
-'https://github.com/justincarattini/clean-ecs-deployment.git'
-            }
-        }
+  steps {
+    git credentialsId: 'justin-github-token', url: 'https://github.com/justincarattini/clean-ecs-deployment.git'
+  }
+}
 
         stage('Build Docker Images') {
             steps {
